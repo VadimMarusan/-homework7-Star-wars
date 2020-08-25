@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font: 700 1em "News Cycle", sans-serif;
+    letter-spacing:.15em;
+    background-color: #000;
+}
+
+
+
+.title {
+    text-align: center;
+}
+
+#scroller {
+    position: absolute;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    height: 100%;
+    font-size: 250%;
+    text-align: justify;
+    color: #ff6;
+    transform: perspective(200px) rotateX(30deg);
+}
+
+#scroller div {
+    position: absolute;
+    top: 100%;
+    animation: scroller 30s linear infinite;
+}
+
+#scroller p {
+    margin: 1.35em 0 1.85em 0;
+    line-height: 1.35em;
+}
+
+
+/* ANIMATIONS */
+
+
+@keyframes scroller {
+    1% {
+        top: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        top: -100%;
+        opacity: 1;
+    }
+}
+
+
